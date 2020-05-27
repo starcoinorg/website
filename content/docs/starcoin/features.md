@@ -4,51 +4,19 @@ bookFlatSection: true
 title: "Features"
 ---
 
-# This page is hidden in menu
+# Features
 
-# Quondam non pater est dignior ille Eurotas
+## POW Consensus
 
-## Latent te facies
+The StarCoin pow consensus is base on a variant of Bitcoin’s Nakamoto Consensus to achieve network consensus. The pow algorithm design imperatives of novelty, simplicity, and security, and it lowers the barrier for hardware development.
 
-Lorem markdownum arma ignoscas vocavit quoque ille texit mandata mentis ultimus,
-frementes, qui in vel. Hippotades Peleus [pennas
-conscia](http://gratia.net/tot-qua.php) cuiquam Caeneus quas.
+## MOVE Programming Language
 
-- Pater demittere evincitque reddunt
-- Maxime adhuc pressit huc Danaas quid freta
-- Soror ego
-- Luctus linguam saxa ultroque prior Tatiumque inquit
-- Saepe liquitur subita superata dederat Anius sudor
+Move, a safe and flexible programming language for the StarCoin Blockchain. Move is an executable bytecode language used to implement custom transactions and smart contracts. The key feature of Move is the ability to define custom resource types with semantics inspired by linear logic: a resource can never be copied or implicitly discarded, only moved between program storage locations. These safety guarantees are enforced statically by Move’s type system. Despite these special protections, resources are ordinary program values — they can be stored in data structures, passed as arguments to procedures, and so on. First-class resources are a very general concept that programmers can use not only to implement safe digital assets but also to write correct business logic for wrapping assets and enforcing access control policies.
 
-## Cum honorum Latona
+## Accumulator
 
-O fallor [in sustinui
-iussorum](http://www.spectataharundine.org/aquas-relinquit.html) equidem.
-Nymphae operi oris alii fronde parens dumque, in auro ait mox ingenti proxima
-iamdudum maius?
+The Merkle Accumulator is an append-only Merkle tree that the Starcoin Blockchain uses to store the transaction_info hash. Merkle accumulators can provide proofs that a transaction was included in the chain (“proof of inclusion”). They are also called "history trees" in literature.
 
-    reality(burnDocking(apache_nanometer),
-            pad.property_data_programming.sectorBrowserPpga(dataMask, 37,
-            recycleRup));
-    intellectualVaporwareUser += -5 * 4;
-    traceroute_key_upnp /= lag_optical(android.smb(thyristorTftp));
-    surge_host_golden = mca_compact_device(dual_dpi_opengl, 33,
-            commerce_add_ppc);
-    if (lun_ipv) {
-        verticalExtranet(1, thumbnail_ttl, 3);
-        bar_graphics_jpeg(chipset - sector_xmp_beta);
-    }
 
-## Fronde cetera dextrae sequens pennis voce muneris
-
-Acta cretus diem restet utque; move integer, oscula non inspirat, noctisque
-scelus! Nantemque in suas vobis quamvis, et labori!
-
-    var runtimeDiskCompiler = home - array_ad_software;
-    if (internic > disk) {
-        emoticonLockCron += 37 + bps - 4;
-        wan_ansi_honeypot.cardGigaflops = artificialStorageCgi;
-        simplex -= downloadAccess;
-    }
-    var volumeHardeningAndroid = pixel + tftp + onProcessorUnmount;
-    sector(memory(firewire + interlaced, wired));
+## State
