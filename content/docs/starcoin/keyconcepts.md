@@ -1,6 +1,6 @@
 ---
-id: protocol
-title: Starcoin Protocol: Key Concepts
+id: keyconcepts
+title: Key Concepts
 ---
 
 The Starcoin Blockchain is a cryptographically authenticated distributed database based on the Starcoin protocol. The nodes collectively follow a consensus protocol to agree on an ordering of finalized transactions in the blockchain. This document briefly describes the key concepts of the Starcoin protocol. 
