@@ -1,76 +1,76 @@
 ---
 id: keyconcepts
-title: Key Concepts
+title: Starcoin协议的关键概念
 ---
 
-The Starcoin Blockchain is a cryptographically authenticated distributed database based on the Starcoin protocol. The nodes collectively follow a consensus protocol to agree on an ordering of finalized transactions in the blockchain. This document briefly describes the key concepts of the Starcoin protocol. 
+Starcoin链是一个基于Starcoin协议的分布式数据库。所有节点遵循相同的共识协议，最终会得到相同的交易执行顺序。本文介绍Starcoin协议中的关键概念。
 
-## Transaction, Block and State
+## 交易, 区块和状态
 
-At the heart of the Starcoin protocol are three fundamental concepts —  transaction, block and state. At any point in time, the blockchain has a “state.” The state (or ledger state) represents the current snapshot of data on the chain. Executing a transaction changes the state of the blockchain. And a block contain many transactions, so an ordered batch of blocks can determine the final state. 
+Starcoin协议有三个核心基本概念——交易、区块和状态。在任何时候，区块链都会处在一个 "状态"下。状态代表了链上数据的当前快照。执行交易就会改变区块链的状态。其中一个区块可能包含很多交易，因此当很多的区块按一定的顺序执行以后，可以得到一个确定的最终状态。
 
-### Transaction
+### 交易
 
-Clients of the Starcoin Blockchain submit transactions to request updates to the ledger state. A signed transaction on the blockchain mainly contains:
+Starcoin区块链的用户通过客户端提交签名后的交易，更新链上的账本状态。签名交易主要包括以下内容：
 
-- **Sender address** — Account address of the sender of the transaction.
-- **Sender public key** — The public key that corresponds to the private key used to sign the transaction.
-- **Program** — The program is comprised of the following:
-  - A Move bytecode transaction script.
-  - An optional list of inputs to the script. For a peer-to-peer transaction, the inputs contain the information about the recipient and the amount transferred to the recipient.
-  - An optional list of Move bytecode modules to publish.
-- **Sequence number** — An unsigned integer that must be equal to the sequence number stored under the sender’s account.
-- **Expiration time** — The time after which the transaction ceases to be valid.
-- **Signature** — The digital signature of the sender.
+- **发送地址** —— 交易发送者的账户地址
+- **发送公钥** —— 由发送者签署交易的私钥生成的公钥
+- **程序** —— 程序可能包含以下部分：
+  - Move脚本的字节码
+  - 输入参数。对于点对点交易，输入包括接收者的信息和金额
+  - 要发布的Move模块的字节码
+- **序列号** —— 一个无符号整数，必须等于发送者账户下存储的序列号
+- **过期时间** —— 交易失效的时间
+- **签名** —— 发送者的数字签名
 
-### Block
-A block contains a batch of the ordered [transactions](#Transaction) mentioned above, , as well as other key data:
-- **Parent hash** — The parent block hash, which chains the blocks.
-- **Block number** — Block number, parent block number plus one.
-- **State root** — Hash of the final state after execution of the block.
-- **Transaction accumulator root** — The transaction accumulator root hash after executing this block.
-- **Block accumulator root** — The hash after accumulating the IDs of all the previous blocks in order.
+### 区块
+一个区块包含了一批有序的前面提到的交易，和一些其他的关键数据：
+- **父区块哈希** —— 通过引用父区块哈希的方式，把所有区块链起来
+- **区块高度** —— 在父区块的高度上递增
+- **状态根哈希** —— 区块执行后的最终状态树的根哈希
+- **交易累加器根哈希** —— 区块执行后的所有交易累加器的根哈希
+- **区块累加器根哈希** —— 区块执行后的所有区块ID累加器的根哈希
 
-### State
+### 状态
 
-The final result of a transaction or block execution is indicated by its status. The ledger state, or global state of the Starcoin Blockchain, is comprised of the state of all accounts in the blockchain. 
+交易或区块执行的最终结果由状态表示。账本状态，即Starcoin区块链的全局状态，包含链上所有账户的状态。
 
-## Proof
+## 证明
 
-All of the data in the Starcoin Blockchain is stored in a single-versioned distributed database. Proof is used to determine whether a transaction or block is included in the blockchain.
+Starcoin区块链上的所有数据存储在一个分布式数据库中。证明被用来确定一个交易或区块是否包含在链中。
 
-In a blockchain, the client does not need to trust the entity from which it is receiving data. A client could query for the state of an account, ask whether a specific transaction or a specific block was processed, and so on. As with other Merkle trees, the ledger history can provide an O(log n)-sized proof of a specific transaction object, where _n_ is the total number of transactions processed.
+在区块链中，客户端可以不信任它所接收数据。客户端可以查询账户状态，查看特定的交易或特定的区块是否被处理，等等。与其他Merkle树一样，账本的历史记录可以针对特定交易或者区块提供一个O(log n)大小的证明，其中n是执行过的交易或者区块总数。
 
-## Full Node
+## 全节点
 
-Clients of the Starcoin Blockchain create transactions and submit them to a full node. Then the full node decides the order of transactions according to certain rules. A full node contains the following logical components:
+Starcoin区块链的客户端创建交易并提交给一个全节点。然后全节点根据一定的规则决定交易的执行顺序。一个全节点包含以下逻辑组件：
 
-**Txpool**
+**交易池**
 
-- Txpool is a buffer that holds the transactions that are “waiting” to be executed.
-- When a new transaction is added to a node’s txpool, this node’s txpool shares this transaction with other nodes.
+- 交易池是一个缓存区，用来存放 "等待"执行的交易
+- 当一个新的交易被添加到一个节点的交易池，这个节点的交易会给其他节点同步这个交易
 
-**Consensus**
+**共识**
 
-- The consensus component is responsible for ordering blocks of transactions and agreeing on the results of execution by participating in the consensus protocol with other nodes in the network.
+- 共识组件负责对区块进行排序，并通过共识协议最终与网络中的其他所有节点达成一致
 
-**BlockChain**
+**链**
 
-- BlockChain maintains the internal state of the chain, providing context for other components to function properly.
+- 链维护系统的内部状态，为其他组件的正常运行提供上下文
 
-**Executor**
+**执行器**
 
-- The executor component utilizes the virtual machine (VM) to execute transactions.
+- 执行器使用虚拟机（VM）来执行交易
 
-**Virtual Machine (VM)**
+**虚拟机(VM)**
 
-- Txpool use the VM component to perform validation checks on transactions.
-- VM is used to run the program included in a transaction and determine the results.
+- 交易池使用VM验证交易
+- VM用于运行交易中包含的程序并计算出结果
 
-**Miner**
+**挖矿**
 
-- Calculate hash by certain rules.
+- 通过一定的算法计算出符合一定规则的哈希
 
-**Storage**
+**存储**
 
-- The storage component is used to persist agreed upon blocks of transactions and their execution results.
+- 存储组件用于保存交易、区块和状态等数据
