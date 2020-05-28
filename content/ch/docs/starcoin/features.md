@@ -1,22 +1,19 @@
 ---
 weight: 3
 bookFlatSection: true
-title: "Features"
+title: "特性"
 ---
 
-# Features
+# 特性
 
-## POW Consensus
+## POW 共识
 
-The StarCoin pow consensus is base on a variant of Bitcoin’s Nakamoto Consensus to achieve network consensus. The pow algorithm design imperatives of novelty, simplicity, and security, and it lowers the barrier for hardware development.
+Starcoin POW 共识是比特币中本聪共识的变种。该算法设计满足新颖性、简单性、安全性等方面的要求，并降低了硬件开发的门槛。
 
-## MOVE Programming Language
+## MOVE 编程语言
 
-Move, a safe and flexible programming language for the StarCoin Blockchain. Move is an executable bytecode language used to implement custom transactions and smart contracts. The key feature of Move is the ability to define custom resource types with semantics inspired by linear logic: a resource can never be copied or implicitly discarded, only moved between program storage locations. These safety guarantees are enforced statically by Move’s type system. Despite these special protections, resources are ordinary program values — they can be stored in data structures, passed as arguments to procedures, and so on. First-class resources are a very general concept that programmers can use not only to implement safe digital assets but also to write correct business logic for wrapping assets and enforcing access control policies.
+Move，是 Starcoin 区块链内置的编程语言，是一种可执行的字节码语言，用于实现自定义交易和智能合约。Move 的主要特点是能够以线性逻辑的语义定义自定义资源类型：资源永远不能被复制或隐式丢弃，只能在程序之间移动。这些安全保证是由 Move 的类型系统静态地执行所导致的。尽管有这些特殊的保护，然而资源也是普通的程序值--它们可以存储在数据结构中，也可以作为参数传递给函数。
 
-## Accumulator
+## 累加器
 
-The Merkle Accumulator is an append-only Merkle tree that the Starcoin Blockchain uses to store the transaction_info hash. Merkle accumulators can provide proofs that a transaction was included in the chain (“proof of inclusion”). They are also called "history trees" in literature.
-
-
-## State
+Merkle 累加器是 Starcoin 区块链用来存储 transaction_info hash 的 Merkle 树。Merkle 累加器可以提供交易被包含在链上的证明（"包含证明"）。它们在文献中也被称为 "历史树"。

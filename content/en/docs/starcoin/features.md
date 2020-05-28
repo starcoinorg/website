@@ -17,6 +17,3 @@ Move, a safe and flexible programming language for the StarCoin Blockchain. Move
 ## Accumulator
 
 The Merkle Accumulator is an append-only Merkle tree that the Starcoin Blockchain uses to store the transaction_info hash. Merkle accumulators can provide proofs that a transaction was included in the chain (“proof of inclusion”). They are also called "history trees" in literature.
-
-
-## State
