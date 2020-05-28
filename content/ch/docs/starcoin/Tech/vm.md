@@ -4,56 +4,33 @@ weight: 2
 bookToc: false
 ---
 
-# At me ipso nepotibus nunc celebratior genus
+# Starcoin Virtual Machine
 
-## Tanto oblite
+## Overview
 
-Lorem markdownum pectora novis patenti igne sua opus aurae feras materiaque
-illic demersit imago et aristas questaque posset. Vomit quoque suo inhaesuro
-clara. Esse cumque, per referri triste. Ut exponit solisque communis in tendens
-vincetis agisque iamque huic bene ante vetat omina Thebae rates. Aeacus servat
-admonitu concidit, ad resimas vultus et rugas vultu **dignamque** Siphnon.
+Starcoin区块链是一个旨在用作金融基础设施的分布式可编程数据库。更改数据库状态的唯一方法是在Starcoin VM上执行交易。交易里包含了由Move编写的智能合约。 Move是Libra Core开发的一种智能合约编程语言， Starcoin区块链采用Move来编写智能合约是因为它在安全性上表现优异。
 
-Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt
-dixit: ritu pharetramque. Exul Laurenti orantem modo, per densum missisque labor
-manibus non colla unum, obiectat. Tu pervia collo, fessus quae Cretenque Myconon
-crate! Tegumenque quae invisi sudore per vocari quaque plus ventis fluidos. Nodo
-perque, fugisse pectora sorores.
+## VM Runtime
 
-## Summe promissa supple vadit lenius
+交易在VM runtime上按顺序验证和执行。如果把VM runtime看成一个黑盒，那么它的输入就是交易和区块链状态，它的输出则是交易执行后的区块链状态。这里的状态是指给定区块高度的Starcoin区块链中的存储的数据和代码。Starcoin交易里的智能合约是用Move编写的，所以Starcoin VM实际上是基于MoveVM开发的。为了有效的利用MoveVM的数据和代码缓存，Starcoin VM采用了一个链状态包裹层，将链状态与MoveVM缓存无缝对接。 另外Starcoin VM正在开发基于状态计费的gas机制，来有效提升存储空间的利用率。也在探索通过形式化验证来提升合约的安全性。 
 
-Quibus largis latebris aethera versato est, ait sentiat faciemque. Aequata alis
-nec Caeneus exululat inclite corpus est, ire **tibi** ostendens et tibi. Rigent
-et vires dique possent lumina; **eadem** dixit poma funeribus paret et felix
-reddebant ventis utile lignum.
+## Standard library
 
-1. Remansit notam Stygia feroxque
-2. Et dabit materna
-3. Vipereas Phrygiaeque umbram sollicito cruore conlucere suus
-4. Quarum Elis corniger
-5. Nec ieiunia dixit
+Starcoin区块链中的每次状态更改都是通过执行嵌入在交易中的Move脚本发生的。交易脚本可以调用标准库里的方法来完成各种状态更改。 Starcoin标准库包括：
+- 在创世交易中发布的Modules。这些核心系统Modules，除了最基本的功能（例如Account和Coin）外，它还支持用户自定义的Token。具体示例请参阅XX。
+- 一组经过授权的交易脚本，用来支持转账等常用交易。
 
-Vertitur mos ortu ramosam contudit dumque; placabat ac lumen. Coniunx Amoris
-spatium poenamque cavernis Thebae Pleiadasque ponunt, rapiare cum quae parum
-nimium rima.
+## Interact with
 
-## Quidem resupinus inducto solebat una facinus quae
+Starcoin组件通过Executor与Starcoin VM交互。Executor调用VM执行一个交易块。Transaction pool组件使用VM的验证功能在无效交易发送给共识组件之前将其丢弃。然后，共识组件使用VM执行交易并将新状态写入状态数据库。
 
-Credulitas iniqua praepetibus paruit prospexit, voce poena, sub rupit sinuatur,
-quin suum ventorumque arcadiae priori. Soporiferam erat formamque, fecit,
-invergens, nymphae mutat fessas ait finge.
+## Folder Structure
 
-1. Baculum mandataque ne addere capiti violentior
-2. Altera duas quam hoc ille tenues inquit
-3. Sicula sidereus latrantis domoque ratae polluit comites
-4. Possit oro clausura namque se nunc iuvenisque
-5. Faciem posuit
-6. Quodque cum ponunt novercae nata vestrae aratra
+```
+├── executor                 # executor
+├── vm
+│   ├── vm_runtime           # vm runtime
+│   ├── stdlib               # standard library
+│   ├── functional_tests     # functinal tests
 
-Ite extrema Phrygiis, patre dentibus, tonso perculit, enim blanda, manibus fide
-quos caput armis, posse! Nocendo fas Alcyonae lacertis structa ferarum manus
-fulmen dubius, saxa caelum effuge extremis fixum tumor adfecit **bella**,
-potentes? Dum nec insidiosa tempora tegit
-[spirarunt](http://mihiferre.net/iuvenes-peto.html). Per lupi pars foliis,
-porreximus humum negant sunt subposuere Sidone steterant auro. Memoraverit sine:
-ferrum idem Orion caelum heres gerebat fixis?
+```
