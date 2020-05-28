@@ -1,3 +1,14 @@
 baseURL = "http://example.org/"
-languageCode = "en-us"
+languageCode = "en"
 title = "Starcoin"
+DefaultContentLanguage = "en"
+
+[languages]
+  [languages.en]
+    contentDir = "content/en"
+    languageName = "English"
+    weight = 10
+  [languages.ch]
+    contentDir = "content/ch"
+    languageName = "Chinese"
+    weight = 20
