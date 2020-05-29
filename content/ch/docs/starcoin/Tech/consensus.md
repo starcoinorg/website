@@ -1,5 +1,5 @@
 ---
-title: 共识简介
+title: 共识介绍
 weight: 3
 ---
 
