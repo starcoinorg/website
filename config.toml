@@ -1,4 +1,4 @@
-baseURL = "http://developer.starcoin.org/"
+baseURL = "https://starcoinorg.github.io"
 languageCode = "en"
 title = "Starcoin"
 DefaultContentLanguage = "en"
