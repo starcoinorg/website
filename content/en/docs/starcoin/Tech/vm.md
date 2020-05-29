@@ -16,7 +16,7 @@ Transactions are sequentially verified and executed on the VM runtime. If you th
 
 ## Standard library
 
-Every state change in the Starcoin blockchain occurs via executing a Move script embedded in a signed transaction. A transaction script invokes procedures of standard library to 完成各种state change. The Starcoin standard library consists of:
+Every state change in the Starcoin blockchain occurs via executing a Move script embedded in a signed transaction. A transaction script invokes procedures of standard library to finish state changes. The Starcoin standard library consists of:
 - The modules published in the genesis transaction. Contains the Move code for the core system modules. In addition to the most basic functions such as Account and Coin, it also supports user-defined tokens. For specific examples, please refer to XX.
 - The authorized trasaction scripts that can be included in a Starcoin transaction. A transaction with an unauthorized script will be discarded.
 
