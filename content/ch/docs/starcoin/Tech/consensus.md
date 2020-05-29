@@ -3,6 +3,6 @@ title: Introduction to Consensus
 weight: 3
 ---
 
-# Consensus
+# 共识
 
-The Starcoin blockchain uses the classic PoW algorithm and the longest chain principle to reach distributed consensus decisions. So Starcoin is a fair and open blockchain.
+Starcoin链是一个安全、完全去中心化的区块链。Starcoin的共识是基于中本聪共识进行优化，采用的PoW算法和最长链原则来达到分布式环境下的决策一致，既继承了中本聪共识的安全、去中心化等特点，又保障了Starcoin网络的公平与开放。
