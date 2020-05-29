@@ -1,5 +1,5 @@
 ---
-title: Introduction to Consensus
+title: 共识简介
 weight: 3
 ---
 
