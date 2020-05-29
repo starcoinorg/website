@@ -18,6 +18,10 @@ jobs:
         hugo-version: '0.71.0'
         extended: true
 
+
+    - name: Version
+      run: hugo version 
+
     - name: Build
       run: hugo --minify --theme book 
 
