@@ -16,10 +16,10 @@ jobs:
       uses: peaceiris/actions-hugo@v2
       with:
         hugo-version: '0.71.0'
-        # extended: true
+        extended: true
 
     - name: Build
-      run: hugo  --minify --theme book 
+      run: hugo --minify --theme book 
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2
