@@ -1,8 +1,9 @@
 ---
 weight: 1
-bookFlatSection: true
 title: "Overview"
 ---
 
-# Overview 
+Starcoin is a Layered Cryptocurrency and Decentralized Blockchain System.
+<!--more-->
+
 

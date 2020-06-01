@@ -5,6 +5,8 @@ title: Key Concepts
 
 This document briefly describes the key concepts of the Starcoin protocol. 
 
+<!--more-->
+
 ## Transaction, Block and State
 
 At the heart of the Starcoin protocol are three fundamental concepts —  transaction, block and state. At any point in time, the blockchain has a “state.” The state (or ledger state) represents the current snapshot of data on the chain. Executing a transaction changes the state of the blockchain. And a block contain many transactions, so an ordered batch of blocks can determine the final state. 

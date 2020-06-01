@@ -5,6 +5,7 @@ weight: 7
 
 This article guides you on how to execute your first transaction on the starcoin blockchain.
 Before that, I recommend you read tech-related articles to get some idea of the basic concepts of starcoin.
+<!--more-->
 
 ## Prerequisite
 

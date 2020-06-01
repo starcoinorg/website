@@ -1,9 +1,11 @@
 ---
 weight: 3
-bookFlatSection: true
 title: "特性"
 ---
 
+Starcoin 的关键特性。
+
+<!--more-->
 ## POW 共识
 
 Starcoin POW 共识是比特币中本聪共识的变种。该算法设计满足新颖性、简单性、安全性等方面的要求，并降低了硬件开发的门槛。

@@ -4,6 +4,7 @@ weight: 5
 ---
 
 Starcoin blockchain is a distributed programmable database designed to be used as a financial infrastructure. The only way to change the state of the database is to execute transactions on the Starcoin VM. The transaction can contain smart contract written with Move. Move is a programming language developed by Libra Core. The security design of Move is completely consistent with the design concept of Starcoin, so we use Move to write smart contracts.
+<!--more-->
 
 ## VM Runtime
 
