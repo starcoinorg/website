@@ -8,7 +8,7 @@ DefaultContentLanguage = "en"
     contentDir = "content/en"
     languageName = "English"
     weight = 10
-  [languages.ch]
-    contentDir = "content/ch"
+  [languages.zh]
+    contentDir = "content/zh"
     languageName = "Chinese"
     weight = 20

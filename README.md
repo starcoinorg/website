@@ -2,8 +2,7 @@
 
 ### PreRequirement
 
-1. Install [git-lfs](https://github.com/git-lfs/git-lfs)
-2. Install [hugo](https://gohugo.io/getting-started/installing/) > 0.68.0
+1. Install [hugo](https://gohugo.io/getting-started/installing/) > 0.68.0
 
 ### Checkout
 
