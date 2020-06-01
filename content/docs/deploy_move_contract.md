@@ -3,13 +3,10 @@ title: Deploy Move contract
 weight: 8
 ---
 
-# Deploy Move contract
-
-Move is a new programming language developed to provide a safe and programmable foundation for the [Libra Blockchain](https://github.com/libra/libra).
-Starcoin Blockchain also support Move language to write smart contract.
+Move is a new programming language developed to provide a safe and programmable foundation for the [Libra Blockchain](https://github.com/libra/libra).Starcoin Blockchain also support Move language to write smart contract.
 
 
-First start a dev network as described in [dev_network.md](./dev_network.md), and get some coins, say `1000000000`.
+First start a dev network as described in [Run/Join Network](./runnetwork), and get some coins, say `1000000000`.
 
 Then, let contracting!
 
@@ -64,5 +61,3 @@ txn 3c957f688c628e7ce2a4e1c238b14505b9cf6068aa3da897f555474ee7b2dd0b submitted.
 
 6. use state cmd to query account state.
 //TODO
-
-Next to read [User defined Coin](./user_defined_coin.md).

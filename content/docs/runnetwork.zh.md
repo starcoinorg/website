@@ -56,14 +56,18 @@ starcoin -n dev console
 
 # 加入 Halley 网络
 
+**Halley** 是 starcoin 的第一个测试网络，它上面的数据会定时清理。
+
 可以使用如下命令加入 Halley 网络:
 ```
 starcoin -n halley
 ```
 
-"Halley" 这个名字的灵感来自于[哈雷彗星](https://en.wikipedia.org/wiki/Halley%27s_Comet)，正式名为1P/Halley，是一颗短周期彗星，每隔75-76年从地球上看到一次。
+"Halley" 这个名字的灵感来自于[哈雷彗星](https://en.wikipedia.org/wiki/Halley%27s_Comet)，正式名为 1P/Halley，是一颗短周期彗星，每隔75-76年从地球上看到一次。
 
 # 加入 Proxima 网络
+
+**Proxima** 是 starcoin 长期运行的一个测试网络，将在 2020 年第三季度发布，正式发布后不会清除数据.
 
 可以使用如下命令加入 Proxima 网络:
 ```

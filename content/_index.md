@@ -14,7 +14,4 @@ introduce starcoin
 introduce move languate
 
 
-
-## Other
-
-xxx
+{{< section >}}

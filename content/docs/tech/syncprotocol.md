@@ -1,15 +1,9 @@
 ---
-id: syncprotocol
-title: sync protocols
+title: Sync protocols
+weight: 3
 ---
 
-The Starcoin block chain contains a variety of sync modes, the two most common of which are described here: 
-
-* full sync
-* fast sync
-
-The following describes the sync process and sync protocols involved in each of these two modes.
-
+The Starcoin block chain contains a variety of sync modes, the two most common of which are described here **full sync**，**fast sync**.The following describes the sync process and sync protocols involved in each of these two modes.
 
 
 ## Sync Block

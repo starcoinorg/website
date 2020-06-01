@@ -1,5 +1,5 @@
 ---
-title: first transaction
+title: First transaction
 weight: 7
 ---
 
