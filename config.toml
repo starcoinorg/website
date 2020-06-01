@@ -3,13 +3,12 @@ languageCode = "en"
 title = "Starcoin"
 DefaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
+theme = "book"
 
 [languages]
   [languages.en]
-    contentDir = "content/en"
     languageName = "English"
     weight = 10
   [languages.zh]
-    contentDir = "content/zh"
     languageName = "Chinese"
     weight = 20
