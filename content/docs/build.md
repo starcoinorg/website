@@ -4,7 +4,7 @@ title: Build from source
 weight: 5
 ---
 
-# Build from source
+## Build from source
 
 1. Clone source code
 
@@ -24,7 +24,7 @@ weight: 5
     ```
 4. Run release build
 
-    ```
+    ```shell
    cargo build --release
     ```
    

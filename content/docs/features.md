@@ -4,8 +4,6 @@ bookFlatSection: true
 title: "Features"
 ---
 
-# Features
-
 ## POW Consensus
 
 The StarCoin pow consensus is base on a variant of Bitcoin’s Nakamoto Consensus to achieve network consensus. The pow algorithm design imperatives of novelty, simplicity, and security, and it lowers the barrier for hardware development.

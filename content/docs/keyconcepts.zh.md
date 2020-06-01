@@ -1,9 +1,9 @@
 ---
 id: keyconcepts
-title: Starcoin协议的关键概念
+title: 关键概念
 ---
 
-Starcoin链是一个基于Starcoin协议的分布式数据库。所有节点遵循相同的共识协议，最终会得到相同的交易执行顺序。本文介绍Starcoin协议中的关键概念。
+本文介绍 Starcoin 中的关键概念。
 
 ## 交易, 区块和状态
 

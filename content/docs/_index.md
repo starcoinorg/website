@@ -4,6 +4,5 @@ bookFlatSection: true
 title: "Learn About Starcoin"
 ---
 
-# Learn About Starcoin
 
-TODO
+{{< section >}}

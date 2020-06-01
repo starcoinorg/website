@@ -1,7 +1,6 @@
 ---
+title: 技术
 weight: 10
 ---
 
-# Tech Index 
-
-TODO
+{{< section >}}
