@@ -15,7 +15,7 @@ git submodule update
 ### 运行server
 - 开发运行
 ```
-hugo server --minify --theme book 
+hugo server --minify
 ```
 - 通过 http://localhost:1313/ 查看效果， 生成的文件放置于 public 目录下。
 
