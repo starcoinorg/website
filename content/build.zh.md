@@ -4,7 +4,9 @@ title: 从源码构建
 weight: 5
 ---
 
-## 从源码构建
+从源码构建 Starcoin。
+
+<!--more-->
 
 1. Clone 源代码
 

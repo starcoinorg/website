@@ -5,6 +5,8 @@ weight: 4
 
 The Merkle Accumulator is an append-only Merkle tree that the Starcoin Blockchain uses to store the transaction_info hash. Merkle accumulators can provide proofs that a transaction was included in the chain (“proof of inclusion”). They are also called "history trees" in literature.
 
+<!--more-->
+
 ## Overview
 The accumulator module is designed to serve two primary purposes:
 Persist the blockchain data, specifically the transactions and block that have been agreed by validators via consensus protocol.

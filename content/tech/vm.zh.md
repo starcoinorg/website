@@ -3,7 +3,8 @@ title: 虚拟机
 weight: 5
 ---
 
-Starcoin区块链是一个旨在用作金融基础设施的分布式可编程数据库。更改数据库状态的唯一方法是在Starcoin VM上执行交易。交易里包含了由Move编写的智能合约。 Move是Libra Core开发的一种智能合约编程语言， Starcoin区块链采用Move来编写智能合约是因为它在安全性上表现优异。
+Starcoin 区块链是一个旨在用作金融基础设施的去中心化系统。更改区块链状态的唯一方法是在 Starcoin VM 上执行交易。交易里包含了由Move编写的智能合约。 Move 是Libra Core开发的一种智能合约编程语言， Starcoin 区块链采用 Move 来编写智能合约是因为它在安全性上表现优异。
+<!--more-->
 
 ## 虚拟机运行时(VM Runtime)
 

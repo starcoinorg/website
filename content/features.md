@@ -1,8 +1,11 @@
 ---
 weight: 3
-bookFlatSection: true
 title: "Features"
 ---
+
+Starcoin's main features.
+
+<!--more-->
 
 ## POW Consensus
 

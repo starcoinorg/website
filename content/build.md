@@ -4,7 +4,9 @@ title: Build from source
 weight: 5
 ---
 
-## Build from source
+Build starcoin from source.
+
+<!--more-->
 
 1. Clone source code
 

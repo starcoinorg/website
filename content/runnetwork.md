@@ -3,9 +3,10 @@ title: Run/Join Network
 weight: 6
 ---
 
-# Run Local Network
 
-`starcoin` is used to start a local network and a local blockchain on your computer. Running a local network makes it easier to test and debug your code changes. You can use the CLI command dev to compile, publish, and execute Move Intermediate Representation (IR) programs on your local cluster of nodes. 
+`starcoin` is used to start a local network or join a starcoin network. Running a local network or join test network makes it easier to test and debug your code changes. You can use the CLI command dev to compile, publish, and execute Move programs on your local network or test network. 
+
+<!--more-->
 
 ## Usage
 
@@ -26,6 +27,7 @@ SUBCOMMAND:
 - console Run node background, after node started ,start cli console
 - help  Prints this message or the help of the given subcommand(s)
 
+## Run Local Network
 
 the following command could start new dev node with 10 second per block:
 
@@ -54,7 +56,7 @@ starcoin -n dev --dev-peroid 10 console
 
 repeat these steps , you cloud get multi node local dev network.
 
-# Join Halley network
+## Join Halley network
 
 **Halley** is first starcoin test network. The data on the chain will be cleaned up periodically。
 
@@ -67,7 +69,7 @@ starcoin -n halley
 Inspiration of the name "Halley" comes from the [Comet Halley](https://en.wikipedia.org/wiki/Halley%27s_Comet), officially designated 1P/Halley, is a short-period comet visible from Earth every 75–76 years.
 
 
-# Join Proxima network
+## Join Proxima network
 
 **Proxima** is starcoin long-running test network, will be released at the third quater of 2020.
 
@@ -80,3 +82,6 @@ starcoin -n proxima
 Inspiration of the name "Proxima" comes from the [Proxima Centauri](https://en.wikipedia.org/wiki/Proxima_Centauri), it is a small, low-mass star located 4.244 light-years (1.301 pc) away from the Sun in the southern constellation of Centaurus. 
 
 
+## Join main network
+
+TODO

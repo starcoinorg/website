@@ -3,6 +3,9 @@ title: Deploy Move contract
 weight: 8
 ---
 
+This article guides you on how to compile and deploy a Move contract to the starcoin blockchain.
+<!--more-->
+
 Move is a new programming language developed to provide a safe and programmable foundation for the [Libra Blockchain](https://github.com/libra/libra).Starcoin Blockchain also support Move language to write smart contract.
 
 
@@ -56,6 +59,7 @@ starcoin% dev deploy /var/folders/by/8jj_3yzx4072w19vb_m934wc0000gn/T/33ee6c17c2
 txn 3c957f688c628e7ce2a4e1c238b14505b9cf6068aa3da897f555474ee7b2dd0b submitted.
 3c957f688c628e7ce2a4e1c238b14505b9cf6068aa3da897f555474ee7b2dd0b
 ```
+
 5. write script to call module.
 //TODO
 
