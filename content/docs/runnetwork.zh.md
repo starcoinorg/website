@@ -1,6 +1,6 @@
 ---
-title: 运行本地网络/加入测试网络
-weight: 3
+title: 运行/加入测试网络
+weight: 6
 ---
 
 # 运行本地网络
@@ -30,7 +30,7 @@ SUBCOMMAND:
 使用如下命令即可启动 dev 节点，平均 10s 出一个块:
 
 ```
-cargo run --bin starcoin -- -n dev --dev-peroid 10 
+starcoin -n dev --dev-peroid 10 
 ```
 
 节点启动成功后，可以在日志中找到:
@@ -42,26 +42,32 @@ Self address is: /ip4/127.0.0.1/tcp/59476/p2p/12D3KooWPePRG6BDdjgtEYmPDxNyJfMWpQ
 接下来设置第二个节点:
 
 ```
-cargo run --bin starcoin -- -n dev --dev-peroid 10 --seed /ip4/127.0.0.1/tcp/59476/p2p/12D3KooWPePRG6BDdjgtEYmPDxNyJfMWpQ1Rwgefuz9eqksLfxJb
+starcoin -n dev --dev-peroid 10 --seed /ip4/127.0.0.1/tcp/59476/p2p/12D3KooWPePRG6BDdjgtEYmPDxNyJfMWpQ1Rwgefuz9eqksLfxJb
 
 ```
 
 当然你也可以使用自带交互式命令行的方式启动:
 
 ```
-cargo run --bin starcoin -- -n dev --dev-peroid 10 console
+starcoin -n dev console
 ```
 
 重复上述步骤，你就可以启动一个本地 dev 网络.
 
-# 加入 Halley/Proxima 网络
+# 加入 Halley 网络
 
 可以使用如下命令加入 Halley 网络:
 ```
-cargo run --bin starcoin -- -n halley
+starcoin -n halley
 ```
+
+"Halley" 这个名字的灵感来自于[哈雷彗星](https://en.wikipedia.org/wiki/Halley%27s_Comet)，正式名为1P/Halley，是一颗短周期彗星，每隔75-76年从地球上看到一次。
+
+# 加入 Proxima 网络
 
 可以使用如下命令加入 Proxima 网络:
 ```
-cargo run --bin starcoin -- -n proxima
+starcoin -n proxima
 ```
+
+"Proxima" 这个名字的灵感来自于[比邻星](https://en.wikipedia.org/wiki/Proxima_Centauri)，它是一颗小的、低质量的恒星，位于半人马座南部的南半球，距离太阳4.244光年(1.301pc)。

@@ -1,6 +1,6 @@
 ---
 title: Run/Join Network
-weight: 3
+weight: 6
 ---
 
 # Run Local Network
@@ -30,7 +30,7 @@ SUBCOMMAND:
 the following command could start new dev node with 10 second per block:
 
 ```
-cargo run --bin starcoin -- -n dev --dev-peroid 10 
+starcoin -n dev --dev-peroid 10 
 ```
 
 after this command,you cound find node address in log or std output ,it could like:
@@ -42,21 +42,39 @@ Self address is: /ip4/127.0.0.1/tcp/59476/p2p/12D3KooWPePRG6BDdjgtEYmPDxNyJfMWpQ
 then you could setup another node by this command:
 
 ```
-cargo run --bin starcoin -- -n dev --dev-peroid 10 --seed /ip4/127.0.0.1/tcp/59476/p2p/12D3KooWPePRG6BDdjgtEYmPDxNyJfMWpQ1Rwgefuz9eqksLfxJb
+starcoin -n dev --dev-peroid 10 --seed /ip4/127.0.0.1/tcp/59476/p2p/12D3KooWPePRG6BDdjgtEYmPDxNyJfMWpQ1Rwgefuz9eqksLfxJb
 
 ```
 
 You could use subcommand console to start cli console:
 
 ```
-cargo run --bin starcoin -- -n dev --dev-peroid 10 console
+starcoin -n dev --dev-peroid 10 console
 ```
 
 repeat these steps , you cloud get multi node local dev network.
 
-# Join Halley/Proxima Network
+# Join Halley network
 
-You could use such command to join halley/proxima network:
+**Halley** is first starcoin test network. The data on the chain will be cleaned up periodically。
+
+You could use such command to join Halley network:
 ```
-cargo run --bin starcoin -- -n dev --dev-peroid 10 console
+starcoin -n halley
 ```
+
+Inspiration of the name "Halley" comes from the [Comet Halley](https://en.wikipedia.org/wiki/Halley%27s_Comet), officially designated 1P/Halley, is a short-period comet visible from Earth every 75–76 years.
+
+
+# Join Proxima network
+
+**Proxima** is starcoin long-running test network, wll be released at the third quater of 2020.
+
+You could use such command to join Proxima network:
+```
+starcoin -n proxima
+```
+
+Inspiration of the name "Proxima" comes from the [Proxima Centauri](https://en.wikipedia.org/wiki/Proxima_Centauri), it is a small, low-mass star located 4.244 light-years (1.301 pc) away from the Sun in the southern constellation of Centaurus. 
+
+
