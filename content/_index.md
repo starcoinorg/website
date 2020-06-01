@@ -1,17 +1,8 @@
 ---
-title: Introduction
-type: docs
+weight: 1
+bookFlatSection: true
+title: "Learn About Starcoin"
 ---
-
-# Starcoin blockchain
-
-## Starcoin 
-
-introduce starcoin
-
-## Move language
-
-introduce move languate
 
 
 {{< section >}}

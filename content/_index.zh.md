@@ -1,20 +1,7 @@
 ---
-title: 简介
-type: docs
+weight: 1
+bookFlatSection: true
+title: "初识Starcoin"
 ---
 
-# Starcoin blockchain
-
-## Starcoin 
-
-starcoin 中文就诶少
-
-## Move language
-
-introduce move languate
-
-
-
-## Other
-
-xxxXXX
+{{< section >}}
