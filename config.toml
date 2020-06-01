@@ -2,6 +2,7 @@ baseURL = "https://starcoinorg.github.io"
 languageCode = "en"
 title = "Starcoin"
 DefaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
 
 [languages]
   [languages.en]
