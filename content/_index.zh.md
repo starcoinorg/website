@@ -1,7 +1,7 @@
 ---
 weight: 1
 bookFlatSection: true
-title: "了解 Starcoin"
+title: "Starcoin 开发者文档"
 ---
 
 {{< section >}}
