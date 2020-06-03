@@ -1,6 +1,6 @@
 baseURL = "http://developer.starcoin.org/"
 languageCode = "en"
-title = "Starcoin"
+title = "Starcoin Developer"
 DefaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
 theme = "book"
@@ -17,10 +17,24 @@ enableGitInfo = true
 [languages]
   [languages.en]
     languageName = "English"
+    title = "Starcoin Developer"
     weight = 10
   [languages.zh]
     languageName = "Chinese"
+    title = "Starcoin 开发者"
     weight = 20
+
+[menu]
+# [[menu.before]]
+[[menu.after]]
+  name = "Github"
+  url = "https://github.com/starcoinorg/starcoin"
+  weight = 10
+
+[[menu.after]]
+  name = "Starcoin"
+  url = "http://starcoin.org/"
+  weight = 20
 
 [params]
   # (Optional, default true) Controls table of contents visibility on right side of pages.
