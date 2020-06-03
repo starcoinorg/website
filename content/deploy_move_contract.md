@@ -1,5 +1,5 @@
 ---
-title: Deploy Move contract
+title: Deploy Move Contract
 weight: 8
 ---
 

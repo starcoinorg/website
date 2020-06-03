@@ -1,5 +1,5 @@
 ---
-title: User defined Coin
+title: User Defined Coin
 weight: 9
 ---
 

@@ -1,7 +1,7 @@
 ---
 weight: 1
 bookFlatSection: true
-title: "Starcoin developer documents"
+title: "Starcoin Developer Documents"
 ---
 
 
