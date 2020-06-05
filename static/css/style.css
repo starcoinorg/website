@@ -1350,6 +1350,22 @@
 .main-footer a {
     color: #9babaf;
 }
+.footer{
+    float: left;
+    height:180px;
+    width: 100%;
+    text-align: center;
+    padding-top: 70px;
+    font-family:PingFangSC-Regular;
+    font-size:16px;
+    color:#9babaf;
+    letter-spacing:0;
+    background:#eef1f4;
+}
+.footer a{
+    color:#9babaf;
+}
+
 .logo{
     font-weight: 600;
 }
