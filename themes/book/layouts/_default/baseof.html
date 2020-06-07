@@ -86,6 +86,11 @@
     <div class="am-footer-miscs ">
         <p>© 2018-2020 <a href="http://starcoin.org/" target="_blank">Starcoin.org</a> All rights reserved. </p>
     </div>
+    <div class="container flex am-container">
+        {{ if .Site.IsMultiLingual }}
+        {{ partial "docs/languages" . }}
+        {{ end }}
+    </div>
 </footer>
 
 <!--底部导航结束-->
