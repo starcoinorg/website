@@ -7,8 +7,7 @@
 ### Checkout
 
 ```shell script
-git clone https://github.com/starcoinorg/starcoin_website
-git submodule update
+git clone https://github.com/starcoinorg/website
 ```
 
 
