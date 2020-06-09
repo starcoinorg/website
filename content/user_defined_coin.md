@@ -22,11 +22,11 @@ starcoin% dev compile -o examples examples/my_token/module/my_token.move
 Then, to compile the three scripts. The scripts depend on my_token module, so pass the dependency through `-d`.
 
 ```bash
-starcoin% dev compile -o examples -f examples/my_token/scripts/init.move -d examples/my_token/module/my_token.move
+starcoin% dev compile -o examples examples/my_token/scripts/init.move -d examples/my_token/module/my_token.move
 ```
 
 ```bash
-starcoin% dev compile -o examples -f examples/my_token/scripts/mint.move -d examples/my_token/module/my_token.move
+starcoin% dev compile -o examples examples/my_token/scripts/mint.move -d examples/my_token/module/my_token.move
 ```
 
 Last, unlock the default wallet and deploy my_token module. 
@@ -39,17 +39,17 @@ starcoin% dev deploy examples/my_token.mv -g 1000000
 
 First, use the default account init module.
 ```bash
-starcoin% wallet execute examples/init.mv -g 1000000
+starcoin% dev execute examples/init.mv -g 1000000
 ```
 
 Second, use the default account mint some MyToken.
 ```bash
-starcoin% wallet execute examples/mint.mv -g 1000000 --arg 1000000
+starcoin% dev execute examples/mint.mv -g 1000000 --arg 1000000
 ```
 
 Third, the second account accept the new Token. An account can accept the Token only if has adopted the Token.
 ```bash
-starcoin% wallet accept_coin -s 353c411064ee39efaf2f3d115c55166a -g 1000000 0x0::aa5d01819bb5b6c5fece4eef943fde9c::MyToken::T
+starcoin% wallet accept_coin -s 353c411064ee39efaf2f3d115c55166a -g 1000000 0xaa5d01819bb5b6c5fece4eef943fde9c::MyToken::T
 ```
 
 Fourth, the default account transfer 100 MyToken to the second user.
