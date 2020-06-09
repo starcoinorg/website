@@ -194,7 +194,7 @@ where `-p my-pass` is the password that was needed when creating the account.
 Once the account is unlocked, execute the following command.
 
 ```
-starcoin% txn transfer -f 1d8133a0c1a07366de459fb08d28d2a6 -t bfbed907d7ba364e1445b971f9182949 -k 7add08c841d0f99f1f90ea2632c72aee483fab882e0d8d6d6defed2f1987345d -v 10000
+starcoin% txn transfer -s 1d8133a0c1a07366de459fb08d28d2a6 -r bfbed907d7ba364e1445b971f9182949 -k 7add08c841d0f99f1f90ea2632c72aee483fab882e0d8d6d6defed2f1987345d -v 10000
 +-----------------+------------------------------------------------------------------+
 | gas_unit_price  | 1                                                                |
 +-----------------+------------------------------------------------------------------+
