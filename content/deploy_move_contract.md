@@ -17,33 +17,34 @@ Then, let contracting!
 
 ```move
 module MyCounter {
-     use 0x0::Transaction;
+     use 0x0::Signer;
+
      resource struct T {
         value:u64,
      }
-     public fun init(){
-        move_to_sender(T{value:0});
+     public fun init(account: &signer){
+        move_to(account, T{value:0});
      }
-     public fun incr() acquires T {
-        let counter = borrow_global_mut<T>(Transaction::sender());
+     public fun incr(account: &signer) acquires T {
+        let counter = borrow_global_mut<T>(Signer::address_of(account));
         counter.value = counter.value + 1;
      }
 
 }
 ```
 
-the source file at examples/my_counter/module/my_counter.move
+the source file at https://github.com/starcoinorg/starcoin/tree/master/examples/my_counter/module/MyCounter.move
 
 2. compile the module.
 
 In starcoin console, run:
 
 ```bash
-starcoin% dev compile examples/my_counter/module/my_counter.move
-/var/folders/by/8jj_3yzx4072w19vb_m934wc0000gn/T/33ee6c17c2cc7327980da96651757650/my_counter.mv
+starcoin% dev compile examples/my_counter/module/MyCounter.move
+/Users/jolestar/.starcoin/cli/dev/tmp/6e0f73c87b0a0c6c4e8d77ca4a3a9c48/MyCounter.mv
 ```
 
-It will compile the module, and output the bytecode to `my_counter.mv` under the temp directory.
+It will compile the module, and output the bytecode to `MyCounter.mv` under the temp directory.
 
 3. unlock your default account.
 
@@ -55,7 +56,7 @@ account 759e96a81c7f0c828cd3bf1cc84239cb unlocked for 300s
 4. deploy module
 
 ```bash
-starcoin% dev deploy /var/folders/by/8jj_3yzx4072w19vb_m934wc0000gn/T/33ee6c17c2cc7327980da96651757650/my_counter.mv
+starcoin% dev deploy /Users/jolestar/.starcoin/cli/dev/tmp/6e0f73c87b0a0c6c4e8d77ca4a3a9c48/MyCounter.mv
 txn 3c957f688c628e7ce2a4e1c238b14505b9cf6068aa3da897f555474ee7b2dd0b submitted.
 3c957f688c628e7ce2a4e1c238b14505b9cf6068aa3da897f555474ee7b2dd0b
 ```
