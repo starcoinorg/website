@@ -13,27 +13,27 @@ In this document, I will use `aa5d01819bb5b6c5fece4eef943fde9c`, the default acc
 
 # Deploy module and scripts
  
-First, compile my_token module. The compiled bytecode will be output to `my_token.mv` under the directory specified by `-o` parameter, or a temp dir if emit the `-o` parameter.
+First, compile my_token module. The compiled bytecode will be output to `MyToken.mv` under the directory specified by `-o` parameter, or a temp dir if emit the `-o` parameter.
 
 ```bash
-starcoin% dev compile -o examples examples/my_token/module/my_token.move 
+starcoin% dev compile -o examples examples/my_token/module/MyToken.move 
 ```
 
 Then, to compile the three scripts. The scripts depend on my_token module, so pass the dependency through `-d`.
 
 ```bash
-starcoin% dev compile -o examples examples/my_token/scripts/init.move -d examples/my_token/module/my_token.move
+starcoin% dev compile -o examples examples/my_token/scripts/init.move -d examples/my_token/module/MyToken.move
 ```
 
 ```bash
-starcoin% dev compile -o examples examples/my_token/scripts/mint.move -d examples/my_token/module/my_token.move
+starcoin% dev compile -o examples examples/my_token/scripts/mint.move -d examples/my_token/module/MyToken.move
 ```
 
-Last, unlock the default wallet and deploy my_token module. 
+Last, unlock the default wallet and deploy MyToken module. 
 
 ```bash
 starcoin% wallet unlock -p
-starcoin% dev deploy examples/my_token.mv -g 1000000
+starcoin% dev deploy examples/MyToken.mv -g 1000000
 ```
 # Execute scripts
 
