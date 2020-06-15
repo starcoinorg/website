@@ -32,29 +32,29 @@ starcoin% dev compile -o examples examples/my_token/scripts/mint.move -d example
 Last, unlock the default wallet and deploy MyToken module. 
 
 ```bash
-starcoin% wallet unlock -p
-starcoin% dev deploy examples/MyToken.mv -g 1000000
+starcoin% wallet unlock
+starcoin% dev deploy examples/MyToken.mv
 ```
 # Execute scripts
 
 First, use the default account init module.
 ```bash
-starcoin% dev execute examples/init.mv -g 1000000
+starcoin% dev execute examples/init.mv
 ```
 
 Second, use the default account mint some MyToken.
 ```bash
-starcoin% dev execute examples/mint.mv -g 1000000 --arg 1000000
+starcoin% dev execute examples/mint.mv --arg 1000000
 ```
 
 Third, the second account accept the new Token. An account can accept the Token only if has adopted the Token.
 ```bash
-starcoin% wallet accept_coin -s 353c411064ee39efaf2f3d115c55166a -g 1000000 0xaa5d01819bb5b6c5fece4eef943fde9c::MyToken::T
+starcoin% wallet accept_coin -s 353c411064ee39efaf2f3d115c55166a 0xaa5d01819bb5b6c5fece4eef943fde9c::MyToken::T
 ```
 
 Fourth, the default account transfer 100 MyToken to the second user.
 ```bash
-starcoin% wallet transfer -r 353c411064ee39efaf2f3d115c55166a -v 10000 -c 0xaa5d01819bb5b6c5fece4eef943fde9c::MyToken::T
+starcoin% wallet transfer -r 353c411064ee39efaf2f3d115c55166a -c 0xaa5d01819bb5b6c5fece4eef943fde9c::MyToken::T
 ```
 
 Last, show balances of second user.

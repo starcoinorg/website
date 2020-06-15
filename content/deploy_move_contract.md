@@ -17,7 +17,7 @@ Then, let contracting!
 
 ```move
 module MyCounter {
-     use 0x0::Signer;
+     use 0x1::Signer;
 
      resource struct T {
         value:u64,
@@ -49,7 +49,7 @@ It will compile the module, and output the bytecode to `MyCounter.mv` under the 
 3. unlock your default account.
 
 ```bash
-starcoin% wallet unlock -p
+starcoin% wallet unlock
 account 759e96a81c7f0c828cd3bf1cc84239cb unlocked for 300s
 ```
 
