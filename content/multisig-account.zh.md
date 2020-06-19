@@ -195,9 +195,9 @@ starcoin% dev gen-multisig-txn -p 908648b8fdff8b9e337b2e546c0ce5ca6f24dee715de07
     public_key: 37283fa8e0b2aa1df9567104d72053c3ee6947bf96559a9a8452870f9d2b5dcf
 
 ```bash
-starcoin% wallet sign_txn -i /Users/annali007/projects/starcoin/28f3bf96.multisig-txn -s 9503b1e9052e6c5cc0b4f9e8d303fa83
+starcoin% wallet partial-sign-txn -i /Users/annali007/projects/starcoin/28f3bf96.multisig-txn -s 9503b1e9052e6c5cc0b4f9e8d303fa83
 /Users/annali007/projects/starcoin/28f3bf96.multisig-txn.partial
-starcoin% wallet sign_txn -i /Users/annali007/projects/starcoin/28f3bf96.multisig-txn.partial -s 6142815e14be403fef8048b945cd4685
+starcoin% wallet partial-sign-txn -i /Users/annali007/projects/starcoin/28f3bf96.multisig-txn.partial -s 6142815e14be403fef8048b945cd4685
 /Users/annali007/projects/starcoin/28f3bf96.multisig-txn.partial
 ```
 
