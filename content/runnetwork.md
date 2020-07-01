@@ -32,7 +32,7 @@ SUBCOMMAND:
 the following command could start new dev node with 10 second per block:
 
 ```shell
-starcoin -n dev --dev-peroid 10 
+starcoin -n dev --dev-period 10 
 ```
 
 after this command,you cound find node address in log or std output ,it could like:
@@ -44,14 +44,14 @@ Self address is: /ip4/127.0.0.1/tcp/59476/p2p/12D3KooWPePRG6BDdjgtEYmPDxNyJfMWpQ
 then you could setup another node by this command:
 
 ```shell
-starcoin -n dev --dev-peroid 10 --seed /ip4/127.0.0.1/tcp/59476/p2p/12D3KooWPePRG6BDdjgtEYmPDxNyJfMWpQ1Rwgefuz9eqksLfxJb
+starcoin -n dev --dev-period 10 --seed /ip4/127.0.0.1/tcp/59476/p2p/12D3KooWPePRG6BDdjgtEYmPDxNyJfMWpQ1Rwgefuz9eqksLfxJb
 
 ```
 
 You could use subcommand console to start cli console:
 
 ```shell
-starcoin -n dev --dev-peroid 10 console
+starcoin -n dev --dev-period 10 console
 ```
 
 repeat these steps , you cloud get multi node local dev network.
