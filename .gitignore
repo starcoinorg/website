@@ -2,3 +2,4 @@ public
 resources/_gen
 .vscode
 *.DS_STORE
+.idea

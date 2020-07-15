@@ -11,6 +11,10 @@
 
 <!--<link rel="stylesheet" href="/css/amazeui.min.css">-->
 <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/animate.css">
+<!--<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>-->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/nav.js"></script>
 <div class="top-header flex">
     <header class="am-topbar am-topbar-fixed-top header-height">
         <div id="nav-backgroud-layer" class="nav-backgroud-layer"></div>
@@ -27,6 +31,7 @@
             <div class="am-collapse am-topbar-collapse nav-div" id="collapse-head">
                 <ul class="am-nav am-nav-pills am-topbar-nav nav-ul-top">
                     <li><a href="http://starcoin.org/index.html">Overview</a></li>
+                    <li><a href="http://starcoin.org/index.html">News</a></li>
                     <li><a href="http://developer.starcoin.org ">Developer </a></li>
                     <li><a href="http://starcoin.org/contact.html">Contact</a></li>
                 </ul>
@@ -34,6 +39,7 @@
                 <div class="am-topbar-right header-right">
                     <ul class="am-nav am-nav-pills am-topbar-nav  header-right-ul">
                         <li class="header-right-a-acitve"><a href="http://starcoin.org/index.html">Overview</a></li>
+                        <li class=""><a href="http://news.starcoin.org">News</a></li>
                         <li ><a href="http://developer.starcoin.org ">Developer </a></li>
                         <li class="contact"><a href="http://starcoin.org/contact.html">Contact</a></li>
                     </ul>
@@ -91,12 +97,12 @@
         {{ partial "docs/languages" . }}
         {{ end }}
         {{ if and .File .Site.Params.BookRepo .Site.Params.BookEditPath }}
-         
+
           <a class="flex align-center" href="{{ .Site.Params.BookRepo }}/{{ .Site.Params.BookEditPath }}/{{ .Site.Params.contentDir }}/{{ replace .File.Path "\\" "/" }}" target="_blank" rel="noopener">
           <img src="{{ "svg/edit.svg" | relURL }}" class="book-icon" alt="Edit" />
           <span>{{ i18n "Edit this page" }}</span>
           </a>
-      
+
         {{ end }}
     </div>
 </footer>
