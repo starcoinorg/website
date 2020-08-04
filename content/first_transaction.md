@@ -65,7 +65,7 @@ After connecting to the node, let's create two accounts first.
 The first account, which is the node's default account, we name it **Alice**.
 
 ```bash
-starcoin% wallet create -p my-pass
+starcoin% account create -p my-pass
 +---------------------------------------------------------------------------------------------------------------
 | address | 1d8133a0c1a07366de459fb08d28d2a6 |
 +---------------------------------------------------------------------------------------------------------------
@@ -74,7 +74,7 @@ starcoin% wallet create -p my-pass
 | public_key | 7add08c841d0f99f1f90ea2632c72aee483fab882e0d8d6d6defed2f1987345d |
 +---------------------------------------------------------------------------------------------------------------
 
-starcoin% wallet show 1d8133a0c1a07366de459fb08d28d2a6
+starcoin% account show 1d8133a0c1a07366de459fb08d28d2a6
 
 | account.address | 1d8133a0c1a07366de459fb08d28d2a6 |
 
@@ -98,7 +98,7 @@ balance | balance | balance | balance
 Then create another one, which we name it **Bob**.
 
 ``` bash
-starcoin% wallet create -p my-pass
+starcoin% account create -p my-pass
 +---------------------------------------------------------------------------------------------------------------
 | address | bfbed907d7ba364e1445b971f9182949 |
 +---------------------------------------------------------------------------------------------------------------
@@ -107,7 +107,7 @@ starcoin% wallet create -p my-pass
 | public_key | d80234b11619e62a62fac048b2b79a9eec1727b476155e1f8fe19c89c7443076 |
 +---------------------------------------------------------------------------------------------------------------
 
-starcoin% wallet show bfbed907d7ba364e1445b971f9182949
+starcoin% account show bfbed907d7ba364e1445b971f9182949
 
 | account.address | bfbed907d7ba364e1445b971f9182949 |
 
@@ -124,7 +124,7 @@ starcoin% wallet show bfbed907d7ba364e1445b971f9182949
 The console also provides a command to view all current accounts.
 
 ```
-starcoin% wallet list
+starcoin% account list
 +----------------------------------+------------+------------------------------------------------------------------+
 | address                          | is_default | public_key                                                       |
 +----------------------------------+------------+------------------------------------------------------------------+
@@ -137,7 +137,7 @@ starcoin% wallet list
 ### Use Faucet to top up your account
 
  In dev environment, faucet can be used to mint accounts. faucet only exists in dev and test net to make it easier for developers developing and testing dapps.
- 
+
  Let's do it!.
 
  ``` bash
@@ -161,7 +161,7 @@ The output of the command is the transaction data  issued by the FAUCET account 
 Wait a few seconds and then check your account information again.
 
 ```
-starcoin% wallet show 1d8133a0c1a07366de459fb08d28d2a6
+starcoin% account show 1d8133a0c1a07366de459fb08d28d2a6
 +--------------------+------------------------------------------------------------------+
 | account.address    | 1d8133a0c1a07366de459fb08d28d2a6                                 |
 +--------------------+------------------------------------------------------------------+
@@ -186,7 +186,7 @@ Now, `balances` and `sequence_number` is filled.
 First you need to unlock Alice's account and authorize node to sign the transaction using Alice's private key.
 
 ```` bash
-wallet unlock -p my-pass 1d8133a0c1a07366de459fb08d28d2a6
+account unlock -p my-pass 1d8133a0c1a07366de459fb08d28d2a6
 ````
 
 where `-p my-pass` is the password that was needed when creating the account.
@@ -215,13 +215,13 @@ starcoin% txn transfer -s 1d8133a0c1a07366de459fb08d28d2a6 -r bfbed907d7ba364e14
 > If, Bob's account does not yet exist on the chain, then his public key should be provided, the transfer transaction will automatically create Bob's account on the chain.
 
 
-At this point, the transaction has been submitted to the chain. 
-You still need to wait a few seconds (in the dev environment, maybe longer in test env) to let the transaction included the chain. 
+At this point, the transaction has been submitted to the chain.
+You still need to wait a few seconds (in the dev environment, maybe longer in test env) to let the transaction included the chain.
 Then check Bob's account information again:.
 
 
 ``` bash
-starcoin% wallet show bfbed907d7ba364e1445b971f9182949
+starcoin% account show bfbed907d7ba364e1445b971f9182949
 +--------------------+------------------------------------------------------------------+
 | account.address    | bfbed907d7ba364e1445b971f9182949                                 |
 +--------------------+------------------------------------------------------------------+

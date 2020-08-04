@@ -19,7 +19,7 @@ title: 多签账户以及多签交易
 下图是我的初始状态。
 
 ```bash
-starcoin% wallet list
+starcoin% account list
 +----------------------------------+------------+------------------------------------------------------------------+
 | address                          | is_default | public_key                                                       |
 +----------------------------------+------------+------------------------------------------------------------------+
@@ -48,7 +48,7 @@ txn mined in block hight: 1, hash: b75bbe0ac17639d746a823a67b278e892cd635aa83ca6
 | sequence_number | 1                                                                |
 +-----------------+------------------------------------------------------------------+
 
-starcoin% wallet show 6142815e14be403fef8048b945cd4685
+starcoin% account show 6142815e14be403fef8048b945cd4685
 +--------------------+------------------------------------------------------------------+
 | account.address    | 6142815e14be403fef8048b945cd4685                                 |
 +--------------------+------------------------------------------------------------------+
@@ -79,7 +79,7 @@ starcoin% wallet show 6142815e14be403fef8048b945cd4685
 首先查看，前置准备中要求读者准备的三个地址，以及对应的公钥。
 
 ```bash
-	starcoin% wallet list
+	starcoin% account list
 +----------------------------------+------------+------------------------------------------------------------------+
 | address                          | is_default | public_key                                                       |
 +----------------------------------+------------+------------------------------------------------------------------+
@@ -111,11 +111,11 @@ starcoin% dev derive-address -t 2 -p ca9eb069f655145d1bf61829e59ef5c70ac10c8acf0
 
 - 多签账户和普通账户的创建流程是一样的。只是多签账户的地址信息和 auth_key_prefix 的生成依赖多签账户参与者的公钥。
 - `-- 0x0f8a76c7fe8612b3dd6547d54546c1a9 b"e0d3d4c38cb2c3fda21425bbca8822c1" 10000000` 是 `create_account` 的参数，第一个是 多签账户的地址，第二个是多签账户的 `auth_key_prefix`，第三个是多签账户初始时的账户余额。
-- 如果遇到 `Server returned rpc error Invalid params: account 6142815e14be403fef8048b945cd4685 is locked` 或者类似的错误，请先执行  `wallet unlock` 命令解锁账户。
+- 如果遇到 `Server returned rpc error Invalid params: account 6142815e14be403fef8048b945cd4685 is locked` 或者类似的错误，请先执行  `account unlock` 命令解锁账户。
 
 ```bash
 # 从默认地址账户发起交易，创建多签账户，并给这个多签账户转账 1000 STC。
-starcoin% wallet execute-buildin -b --script create_account -t 0x01::STC::STC -- 0x0f8a76c7fe8612b3dd6547d54546c1a9 b"e0d3d4c38cb2c3fda21425bbca8822c1" 10000000
+starcoin% account execute-buildin -b --script create_account -t 0x01::STC::STC -- 0x0f8a76c7fe8612b3dd6547d54546c1a9 b"e0d3d4c38cb2c3fda21425bbca8822c1" 10000000
 txn becac3e5f1605255e6274b7b0a7c8f17262439c123f96f584cbce8d667f0800d submitted.
 txn mined in block hight: 5, hash: c20a82c741f5f552b622e797769567dabf577eb00c466d81dff8f9cada5fda45
 becac3e5f1605255e6274b7b0a7c8f17262439c123f96f584cbce8d667f0800d
@@ -139,7 +139,7 @@ starcoin% state get_account 0f8a76c7fe8612b3dd6547d54546c1a9
 这一小节，我们再从默认钱包地址给这个多签账户转 1000w 个 STC。
 
 ```bash
-starcoin% wallet transfer -v 10000000 -r 0f8a76c7fe8612b3dd6547d54546c1a9
+starcoin% account transfer -v 10000000 -r 0f8a76c7fe8612b3dd6547d54546c1a9
 +-----------------+------------------------------------------------------------------+
 | gas_unit_price  | 1                                                                |
 +-----------------+------------------------------------------------------------------+
@@ -195,9 +195,9 @@ starcoin% dev gen-multisig-txn -p 908648b8fdff8b9e337b2e546c0ce5ca6f24dee715de07
     public_key: 37283fa8e0b2aa1df9567104d72053c3ee6947bf96559a9a8452870f9d2b5dcf
 
 ```bash
-starcoin% wallet partial-sign-txn -i /Users/annali007/projects/starcoin/28f3bf96.multisig-txn -s 9503b1e9052e6c5cc0b4f9e8d303fa83
+starcoin% account partial-sign-txn -i /Users/annali007/projects/starcoin/28f3bf96.multisig-txn -s 9503b1e9052e6c5cc0b4f9e8d303fa83
 /Users/annali007/projects/starcoin/28f3bf96.multisig-txn.partial
-starcoin% wallet partial-sign-txn -i /Users/annali007/projects/starcoin/28f3bf96.multisig-txn.partial -s 6142815e14be403fef8048b945cd4685
+starcoin% account partial-sign-txn -i /Users/annali007/projects/starcoin/28f3bf96.multisig-txn.partial -s 6142815e14be403fef8048b945cd4685
 /Users/annali007/projects/starcoin/28f3bf96.multisig-txn.partial
 ```
 
@@ -225,7 +225,7 @@ b53a6355e3ed23d81aaae716cb9999233ca2e7611fbceef36d99f870c476971c
 可以发现，balances.STC 是 500w，说明转账成功。
 
 ```bash
-starcoin% wallet show 2a3a2feefb08a61450e8c84b5ca86cfb
+starcoin% account show 2a3a2feefb08a61450e8c84b5ca86cfb
 +--------------------+------------------------------------------------------------------+
 | account.address    | 2a3a2feefb08a61450e8c84b5ca86cfb                                 |
 +--------------------+------------------------------------------------------------------+
