@@ -115,7 +115,11 @@ starcoin% dev derive-address -t 2 -p ca9eb069f655145d1bf61829e59ef5c70ac10c8acf0
 
 ```bash
 # 从默认地址账户发起交易，创建多签账户，并给这个多签账户转账 1000 STC。
-starcoin% account execute-buildin -b --script create_account -t 0x01::STC::STC -- 0x0f8a76c7fe8612b3dd6547d54546c1a9 b"e0d3d4c38cb2c3fda21425bbca8822c1" 10000000
+starcoin% account execute-buildin -b --script create_account -t 0x01::STC::STC \
+--arg 0x0f8a76c7fe8612b3dd6547d54546c1a9 \
+--arg x"e0d3d4c38cb2c3fda21425bbca8822c1" \
+--arg 10000000
+
 txn becac3e5f1605255e6274b7b0a7c8f17262439c123f96f584cbce8d667f0800d submitted.
 txn mined in block hight: 5, hash: c20a82c741f5f552b622e797769567dabf577eb00c466d81dff8f9cada5fda45
 becac3e5f1605255e6274b7b0a7c8f17262439c123f96f584cbce8d667f0800d
@@ -172,7 +176,17 @@ starcoin% state get_account 0f8a76c7fe8612b3dd6547d54546c1a9
 我们来发起一个多签交易：从多签账户往我的账户地址（ `2a3a2feefb08a61450e8c84b5ca86cfb` ）转账 500w 个 STC。
 
 ```bash
-starcoin% dev gen-multisig-txn -p 908648b8fdff8b9e337b2e546c0ce5ca6f24dee715de0782e2f7943c677b6284 -p ca9eb069f655145d1bf61829e59ef5c70ac10c8acf0d1a6ffadd1a40505d3283 -p 37283fa8e0b2aa1df9567104d72053c3ee6947bf96559a9a8452870f9d2b5dcf --threshold 2 --stdlib-script peer_to_peer -t 0x01::STC::STC -- 0x2a3a2feefb08a61450e8c84b5ca86cfb b"b549cbd66a9f0a7fe645b21aa740ffad" 5000000
+starcoin% dev gen-multisig-txn \
+-p 908648b8fdff8b9e337b2e546c0ce5ca6f24dee715de0782e2f7943c677b6284 \
+-p ca9eb069f655145d1bf61829e59ef5c70ac10c8acf0d1a6ffadd1a40505d3283 \
+-p 37283fa8e0b2aa1df9567104d72053c3ee6947bf96559a9a8452870f9d2b5dcf \
+--threshold 2 \
+--stdlib-script peer_to_peer \
+-t 0x01::STC::STC \
+--arg 0x2a3a2feefb08a61450e8c84b5ca86cfb \
+--arg x"b549cbd66a9f0a7fe645b21aa740ffad" \
+--arg 5000000
+
 /Users/annali007/projects/starcoin/28f3bf96.multisig-txn
 ```
 
