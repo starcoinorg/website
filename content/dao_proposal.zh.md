@@ -128,7 +128,7 @@ DEV 链启动后，会默认给基金会账号 mint 一笔 stc，而节点账号
 
 ``` bash
 # 解锁基金会账号，用基金会账号对提案投票
-dev unlock 0000000000000000000000000a550c18
+account unlock 0000000000000000000000000a550c18
 dev execute -s 0x0000000000000000000000000a550c18 -b --script cast_vote -t 0x1::STC::STC -t 0x1::ModifyDaoConfigProposal::DaoConfigUpdate --arg 0x3ce9c3beeb95b555f5e3f2ac297afbf1 --arg 0 --arg true --arg 490000000000000000u128
 ```
 
