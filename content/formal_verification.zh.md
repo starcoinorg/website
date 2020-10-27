@@ -90,6 +90,6 @@ module TestArithmetic {
 更多信息请参考下面的文档：
 
 -  [Move智能合约的形式化验证工具](http://westar.io/blog/move_prover/)
--  [Move Prover 用户指南](https://github.com/starcoinorg/starcoin/tree/master/vm/move-prover/docs/prover-guide.md]
--  [Move 形式化规范语言](https://github.com/starcoinorg/starcoin/tree/master/vm/move-prover/docs/spec-lang.md]
+-  [Move Prover 用户指南](https://github.com/starcoinorg/starcoin/tree/master/vm/move-prover/docs/prover-guide.md)
+-  [Move 形式化规范语言](https://github.com/starcoinorg/starcoin/tree/master/vm/move-prover/docs/spec-lang.md)
 

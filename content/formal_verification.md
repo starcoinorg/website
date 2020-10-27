@@ -99,5 +99,5 @@ With this, the prover will succeed without any errors.
 For more information, refer to the documentation:
 
 -  [Introduction to Move Formal Verification](http://westar.io/blog/move_prover/)
--  [Move Prover User Guide](https://github.com/starcoinorg/starcoin/tree/master/vm/move-prover/docs/prover-guide.md]
--  [Move Specification Language](https://github.com/starcoinorg/starcoin/tree/master/vm/move-prover/docs/spec-lang.md]
+-  [Move Prover User Guide](https://github.com/starcoinorg/starcoin/tree/master/vm/move-prover/docs/prover-guide.md)
+-  [Move Specification Language](https://github.com/starcoinorg/starcoin/tree/master/vm/move-prover/docs/spec-lang.md)
