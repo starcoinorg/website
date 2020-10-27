@@ -1,7 +1,11 @@
 ---
 title: Formal Verification
-weight: 11
+weight: 10
 ---
+
+Introduce to Move's formal verification tool
+
+<!--more-->
 
 # Formal Verification 
 
@@ -49,7 +53,7 @@ might have in the current directory. If verification succeeds, the prover will t
 some statistics dependent on the configured verbosity level. Otherwise, it will print diagnosis. 
 We will use `arithm.move` to demonstrate how to write formal specification.
 
-```shell script
+```move
 /// arithm.move
 module TestArithmetic {
 
@@ -72,7 +76,7 @@ If we run the Move prover on the above example, we get the following error:
 
 This happens if the function's aborting is not covered by the specification. Let's fix the above and add the following condition:
 
-```shell script
+```move
 module TestArithmetic {
 
     spec module {
@@ -95,5 +99,5 @@ With this, the prover will succeed without any errors.
 For more information, refer to the documentation:
 
 -  [Introduction to Move Formal Verification](http://westar.io/blog/move_prover/)
--  Move Prover User Guide: starcoin/vm/move-prover/docs/prover-guide.md
--  Move Specification Language: starcoin/vm/move-prover/docs/spec-lang.md
+-  [Move Prover User Guide](https://github.com/starcoinorg/starcoin/tree/master/vm/move-prover/docs/prover-guide.md]
+-  [Move Specification Language](https://github.com/starcoinorg/starcoin/tree/master/vm/move-prover/docs/spec-lang.md]
