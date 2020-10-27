@@ -1,6 +1,6 @@
 ---
 title: Tech
-weight: 10
+weight: 15
 ---
 
 Some technical documentation about starcoin.

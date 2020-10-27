@@ -1,7 +1,11 @@
 ---
 title: 形式化验证
-weight: 11
+weight: 10
 ---
+
+介绍 Move 的形式化验证工具 Move Prover的基本用法。
+
+<!--more-->
 
 # 形式化验证
 
@@ -42,7 +46,7 @@ export Z3_EXE=/usr/local/bin/z3
 如果验证成功，Prover将打印一些统计信息，否则将打印错误诊断信息。
 下面我们使用`arithm.move`来看一下如何对其进行形式化验证。首先，需要编写形式化规范。
 
-```shell script
+```move
 /// arithm.move
 module TestArithmetic {
 
@@ -64,7 +68,7 @@ Move的形式化规范通常直接添加到源码里面。 `pragma verify = true
 
 这说明有一些退出路径没有被规范覆盖到。可以通过添加下面的 aborts_if 退出条件来完善规范。规范添加完整后 Porver 将不再报错。
 
-```shell script
+```move
 module TestArithmetic {
 
     spec module {
@@ -86,5 +90,6 @@ module TestArithmetic {
 更多信息请参考下面的文档：
 
 -  [Move智能合约的形式化验证工具](http://westar.io/blog/move_prover/)
--  Move Prover 用户指南: starcoin/vm/move-prover/docs/prover-guide.md
--  Move 形式化规范语言: starcoin/vm/move-prover/docs/spec-lang.md
+-  [Move Prover 用户指南](https://github.com/starcoinorg/starcoin/tree/master/vm/move-prover/docs/prover-guide.md]
+-  [Move 形式化规范语言](https://github.com/starcoinorg/starcoin/tree/master/vm/move-prover/docs/spec-lang.md]
+
