@@ -1,6 +1,6 @@
 ---
 title: 挖矿
-weight: 6
+weight: 11
 ---
 
 `starcoin_miner` 命令行工具用于远程连接到 starcoin 节点，并提供挖矿功能。
