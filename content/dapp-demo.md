@@ -16,7 +16,7 @@ title: DAPP 开发指南
 将 dev 节点的私钥导入到钱包中。
 查看私钥的命令如下：
 ``` bash
-starcoin% account export 0xf6832e44f94c95606d2ab895b719e6d2811047115a84d87646abb4ee7393bf29
+starcoin% account export 0x2291c747b396303a6475db8468a910d0
 account 0x2291c747b396303a6475db8468a910d0, private key: 0xf6832e44f94c95606d2ab895b719e6d2811047115a84d87646abb4ee7393bf29
 ```
 
@@ -43,11 +43,15 @@ starcoin% dev compile -d /Volumes/SATA2000DM008-2FR102/projects/starcoinorg/rewa
 
 ## 在链上初始化奖励池
 
-合约编译好之后，需要在链上初始化出挖矿所用到的奖励池。使用以下命令提交交易。
+合约编译好之后，需要把合约部署到链上，并在链上初始化出挖矿所用到的奖励池。
 
 
 ```bash
-dev execute -b /Volumes/SATA2000DM008-2FR102/projects/starcoinorg/rewarding-pool-dapp/contracts/target/create_coco_and_pool.mv --type_tag 0x1::STC::STC --arg 10000000u128 --arg 3600
+# 部署 modules
+starcoin% dev execute -b /Volumes/SATA2000DM008-2FR102/projects/starcoinorg/rewarding-pool-dapp/contracts/target/modules/RewardPool.mv
+starcoin% dev execute -b /Volumes/SATA2000DM008-2FR102/projects/starcoinorg/rewarding-pool-dapp/contracts/target/modules/CoCo.mv
+# 初始化奖励池
+starcoin% dev execute -b /Volumes/SATA2000DM008-2FR102/projects/starcoinorg/rewarding-pool-dapp/contracts/target/create_coco_and_pool.mv --type_tag 0x1::STC::STC --arg 10000000u128 --arg 3600
 ```
 
 ## 配置 DAPP
