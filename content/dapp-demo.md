@@ -11,7 +11,7 @@ title: DAPP 开发指南
 - 到 [starcoin wallet](https://github.com/starcoinorg/starcoin_wallet_flutter/releases) 页面下载 Starcoin 钱包。
 - clone https://github.com/starcoinorg/rewarding-dapp  到本地。
 
-## 钱包初始化
+### 钱包初始化
 
 将 dev 节点的私钥导入到钱包中。
 查看私钥的命令如下：
@@ -73,3 +73,6 @@ DApp 启动成功后，打开 `http://localhost:8080/#/` 页面。
 然后就可以探索它的功能了。
 
 
+## 结语
+
+目前 SDK 和 钱包功能相对还比较粗糙。试用的过程中，如果遇到问题，可以直接 GitHub 联系我。
