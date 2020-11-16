@@ -3,7 +3,7 @@ id: dapp-demo-show
 title: DAPP 开发例子演示
 ---
 
-本文以一个 defi 挖矿的例子介绍如何在 starcoin 上开发 DApp。（完整的代码链接在 https://github.com/starcoinorg/rewarding-dapp）
+本文以一个 defi 挖矿的例子介绍如何在 starcoin 上开发 DApp。
 
 ## 准备工作
 
