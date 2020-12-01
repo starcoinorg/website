@@ -1,5 +1,5 @@
 ---
-title: Upgrade module
+title: 升级Module
 weight: 14
 ---
 
