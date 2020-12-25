@@ -21,7 +21,6 @@ weight: 7
 - 给 Alice 账户挖钱。
 - 提交转账交易：Alice 给 Bob 打钱。
 
-```
 
 ### 创建账户
 
@@ -53,7 +52,7 @@ starcoin% dev get_coin -v 5000000
 
 等待几秒钟，然后再查看账户信息。
 
-```
+```bash
 starcoin% account show 1d8133a0c1a07366de459fb08d28d2a6
 +--------------------+------------------------------------------------------------------+
 | account.address    | 1d8133a0c1a07366de459fb08d28d2a6                                 |
@@ -84,7 +83,7 @@ account unlock -p my-pass 1d8133a0c1a07366de459fb08d28d2a6
 
 账户解锁后，执行以下命令：
 
-```
+```bash
 starcoin% txn transfer -f 1d8133a0c1a07366de459fb08d28d2a6 -t bfbed907d7ba364e1445b971f9182949 -k 7add08c841d0f99f1f90ea2632c72aee483fab882e0d8d6d6defed2f1987345d -v 10000
 +-----------------+------------------------------------------------------------------+
 | gas_unit_price  | 1                                                                |
