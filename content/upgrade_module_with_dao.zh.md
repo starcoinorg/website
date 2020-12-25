@@ -2,7 +2,9 @@
 title: 通过Dao升级Module
 weight: 14
 ---
+Starcoin 支持通过 DAO 治理机制升级 Module。
 
+<!--more-->
 1. 编译好要更新的Module；
 2. 解锁账号：
 
