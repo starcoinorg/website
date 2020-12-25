@@ -20,7 +20,6 @@ FLAGS:
 OPTIONS:
 - --seed config seed node address manually
 - -n, --net network name ,it should be one of dev/halley/proxima/main
-- -s sync mode , it should be full or fast
 
 SUBCOMMAND:
 - console Run node background, after node started ,start cli console

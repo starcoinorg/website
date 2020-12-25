@@ -19,7 +19,7 @@ FLAGS:
 OPTIONS:
 - --seed 指定 seed
 - -n,--net 网络名 ,可以是 dev/halley/proxima/main 其中一个，本地测试网络使用 dev。如果想自定义网络请参看[运行自定义网络](./runcustomnetwork)
-- -s 同步模式, 可选 full 或者 fast
+
 
 SUBCOMMAND:
 - console background 运行节点，节点启动完成后，启动交互式命令行工具
@@ -37,13 +37,13 @@ starcoin -n dev
 节点启动成功后，可以在日志中找到:
 
 ```shell
-Self address is: /ip4/127.0.0.1/tcp/59476/p2p/12D3KooWPePRG6BDdjgtEYmPDxNyJfMWpQ1Rwgefuz9eqksLfxJb
+Self address is: /ip4/127.0.0.1/tcp/9840/p2p/12D3KooWPePRG6BDdjgtEYmPDxNyJfMWpQ1Rwgefuz9eqksLfxJb
 ```
 
 接下来设置第二个节点:
 
 ```shell
-starcoin -n dev --seed /ip4/127.0.0.1/tcp/59476/p2p/12D3KooWPePRG6BDdjgtEYmPDxNyJfMWpQ1Rwgefuz9eqksLfxJb
+starcoin -n dev --seed /ip4/127.0.0.1/tcp/9840/p2p/12D3KooWPePRG6BDdjgtEYmPDxNyJfMWpQ1Rwgefuz9eqksLfxJb
 
 ```
 

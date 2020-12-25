@@ -16,48 +16,10 @@ weight: 7
 
 ## 提交交易的几个步骤
 
-- 启动 cli console，并连接到 starcoin 节点。
+- 启动 starcoin 控制台，并连接到 starcoin 节点，详细步骤请查阅[使用 strcoin 控制台](./console)。
 - 创建两个账户，Alice,Bob。
 - 给 Alice 账户挖钱。
 - 提交转账交易：Alice 给 Bob 打钱。
-
-### 启动 cli console
-
-假设你的节点目录是 `dev_node`（如果你的节点目录不一样，后续命令中的 `dev_node` 需要替换成你自己的节点目录）。
-
-执行以下命令，进入 starcoin console。
-
-- 通过本地的 IPC 进行连接：
-
-``` shell
-> starcoin -d dev_node console
-```
-
-- 通过 websocket 连接：
-查看你 节点 config 文件中的 websocket 端口，config文件在 `dev_node/dev/config.yml`
-
-以下是我本机的相关配置。
-
-``` toml
-[rpc]
-ws_address = "127.0.0.1:56982"
-```
-
-然后执行以下命令进入 console。（请将`56982`成你的端口）
-
-```shell
-starcoin --connect ws://127.0.0.1:56982 console
-```
-
-
-console 的基本展示如下：
-
-``` shell
-2020-05-28T17:42:07.577269+08:00 INFO starcoin::cmd/starcoin/src/main.rs::27 - Starcoin opts: StarcoinOpt { connect: Some(WebSocket("ws://127.0.0.1:56982")), data_dir: None, net: None, seed: None, dev_period: 0, node_key: None, node_key_file: None, sync_mode: FAST, disable_std_log: false, disable_file_log: false, enable_mine: None, miner_thread: None, disable_seed: false }
-2020-05-28T17:42:07.577565+08:00 INFO starcoin::cmd/starcoin/src/main.rs::57 - Try to connect node by websocket: "ws://127.0.0.1:56982"
-2020-05-28T17:42:07.583089+08:00 INFO starcoin::cmd/starcoin/src/main.rs::76 - Start console, disable stderr output.
-Logger is disabled.
-starcoin%
 
 ```
 
