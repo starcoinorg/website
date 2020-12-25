@@ -9,7 +9,7 @@ weight: 7
 
 ## 使用方法
 
-`starcoin` -n chain_name:chain_id:genesis_config_name_or_path
+`starcoin` -n chain_name:chain_id --genesis-config genesis_config_name_or_path
 
 运行自定义区块链网络的时候，-n,--net 参数的值由三个参数通过 `:` 符号拼接而成。
 
@@ -30,13 +30,13 @@ starcoin_generator -n my_chain:123:halley genesis_config
 ## 生成 genesis 区块
 
 ```
-starcoin_generator -n my_chain:123:genesis_config.json genesis
+starcoin_generator -n my_chain:123 genesis
 ```
 
-该命令将根据前面生成的 genesis 配置文件生成 genesis 区块。参数中的 genesis_config.json 可以省略，默认的 genesis 配置文件即是 ~/.starcoin/$chain_name/genesis_config.json。当然，也可以将 genesis_config.json 文件放置在其他位置，然后通过绝对地址指定，比如 
+该命令将根据前面生成的 genesis 配置文件生成 genesis 区块。默认的 genesis 配置文件即是 ~/.starcoin/$chain_name/genesis_config.json。当然，也可以将 genesis_config.json 文件放置在其他位置，然后通过绝对地址指定，比如 
 
 ```
-starcoin_generator -n my_chain:123:/data/conf/my_chain/genesis_config.json genesis
+starcoin_generator -n my_chain:123 --genesis-config /data/conf/my_chain/genesis_config.json genesis
 ```
 
 ## 运行自定义网络节点

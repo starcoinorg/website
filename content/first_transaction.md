@@ -13,49 +13,10 @@ Let's say you've run up a starcoin dev node locally.
 
 ## A few steps to submit a transaction
 
-- Start the CLI console and connect to the starcoin node.
+- Start the CLI console and connect to the starcoin node，detail document at [Use starcoin console](./console).
 - Create two accounts: Alice,Bob.
 - Mint money into Alice's account.
 - Submit transfer transaction: Alice send money to Bob.
-
-### Start the cli console
-
-Let's say the directory of your node is `dev_node` (if the directory of yours is different, replace the `dev_node` in subsequent commands with yours).
-
-Execute the following command to enter the starcoin console.
-
-- Connection via local IPC
-
-```bash
-> starcoin -d dev_node console
-```
-
-- Connect via websocket
-Check the websocket port in your node config file, the config file is at `dev_node/dev/config.yml`
-
-The following is my configuration.
-
-``` toml
-[RPC]
-ws_address = "127.0.0.1:56982"
-```
-
-Then execute the following command. (Please replace `56982` with your port)
-
-```shell
-starcoin --connect ws://127.0.0.1:56982 console
-```
-
-
-The console may look like:
-
-```shell
-2020-05-28T17:42:07.577269+08:00 INFO starcoin::cmd/starcoin/src/main.rs::27 - Starcoin opts: StarcoinOpt { connect: Some(WebSocket("ws://127.0.0.1:56982")), data_dir: None, net: None, seed: None, dev_period: 0, node_key: None, node_key_file: None, sync_mode: FAST, disable_std_log: false, disable_file_log: false, enable_mine: None, miner_thread: None, disable_seed: false }
-2020-05-28T17:42:07.577565+08:00 INFO starcoin::cmd/starcoin/src/main.rs::57 - Try to connect node by websocket: "ws://127.0.0.1:56982"
-2020-05-28T17:42:07.583089+08:00 INFO starcoin::cmd/starcoin/src/main.rs::76 - Start console, disable stderr output.
-Logger is disabled.
-starcoin%.
-```
 
 ### Create an account
 
