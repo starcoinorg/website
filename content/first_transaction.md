@@ -14,86 +14,13 @@ Let's say you've run up a starcoin dev node locally.
 ## A few steps to submit a transaction
 
 - Start the CLI console and connect to the starcoin node，detail document at [Use starcoin console](./console).
-- Create two accounts: Alice,Bob.
+- Create two accounts: Alice,Bob，detail step see [Account manager](./account_manager).
 - Mint money into Alice's account.
 - Submit transfer transaction: Alice send money to Bob.
 
 ### Create an account
 
-After connecting to the node, let's create two accounts first.
-
-
-The first account, which is the node's default account, we name it **Alice**.
-
-```bash
-starcoin% account create -p my-pass
-+---------------------------------------------------------------------------------------------------------------
-| address | 1d8133a0c1a07366de459fb08d28d2a6 |
-+---------------------------------------------------------------------------------------------------------------
-| is_default | false | false
-+---------------------------------------------------------------------------------------------------------------
-| public_key | 7add08c841d0f99f1f90ea2632c72aee483fab882e0d8d6d6defed2f1987345d |
-+---------------------------------------------------------------------------------------------------------------
-
-starcoin% account show 1d8133a0c1a07366de459fb08d28d2a6
-
-| account.address | 1d8133a0c1a07366de459fb08d28d2a6 |
-
-| account.is_default | false
-
-| account.public_key | 7add08c841d0f99f1f90ea2632c72aee483fab882e0d8d6d6defed2f1987345d |
-
-| auth_key_prefix | 7bc6066656bb248755686d2ab78aef14 |
-
-balance | balance | balance | balance
-
-| sequence_number | sequence_number |
-
-```
-
-- `address` is the account address.
-- `public_key` is the public key corresponding to the account address.
-
-> Note that creating an account just creates a pair of keys in the starcoin node and does not update the state of the chain. So balance and sequence_number are still empty at this time.
-
-Then create another one, which we name it **Bob**.
-
-``` bash
-starcoin% account create -p my-pass
-+---------------------------------------------------------------------------------------------------------------
-| address | bfbed907d7ba364e1445b971f9182949 |
-+---------------------------------------------------------------------------------------------------------------
-| is_default | false | false
-+---------------------------------------------------------------------------------------------------------------
-| public_key | d80234b11619e62a62fac048b2b79a9eec1727b476155e1f8fe19c89c7443076 |
-+---------------------------------------------------------------------------------------------------------------
-
-starcoin% account show bfbed907d7ba364e1445b971f9182949
-
-| account.address | bfbed907d7ba364e1445b971f9182949 |
-
-| account.is_default | false
-
-| account.public_key | d80234b11619e62a62fac048b2b79a9eec1727b476155e1f8fe19c89c7443076 |
-
-| auth_key_prefix | 7c87272c7fc2f5586a0770d1d718f14f |
-
-| sequence_number | sequence_number |
-+- ------
-```
-
-The console also provides a command to view all current accounts.
-
-```
-starcoin% account list
-+----------------------------------+------------+------------------------------------------------------------------+
-| address                          | is_default | public_key                                                       |
-+----------------------------------+------------+------------------------------------------------------------------+
-| bfbed907d7ba364e1445b971f9182949 | false      | d80234b11619e62a62fac048b2b79a9eec1727b476155e1f8fe19c89c7443076 |
-+----------------------------------+------------+------------------------------------------------------------------+
-| 1d8133a0c1a07366de459fb08d28d2a6 | true       | 7add08c841d0f99f1f90ea2632c72aee483fab882e0d8d6d6defed2f1987345d |
-+----------------------------------+------------+------------------------------------------------------------------+
-```
+After connecting to the node, let's first create two accounts. Here we assume that both accounts have been created successfully, Alice is the default account with the address 0x1d8133a0c1a07366de459fb08d28d2a6 and Bob's address is 0xbfbed907d7ba364e1445b971f9182949.
 
 ### Use Faucet to top up your account
 
