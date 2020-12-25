@@ -3,6 +3,10 @@ title: Upgrade module with Dao
 weight: 14
 ---
 
+Starcoin support upgrade module by DAO.
+
+<!--more-->
+
 1. compile the module which you want to upgrade.
 2. unlock your account.
 
